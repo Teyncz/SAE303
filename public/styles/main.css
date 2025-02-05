@@ -27,14 +27,36 @@ body {
 }
 
 @keyframes slideTop {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-100px);
-    }
+  0% {
+    transform: translateY(0);
   }
+  100% {
+    transform: translateY(-100px);
+  }
+}
 
-  .animate-slideTop {
-    animation: slideTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
+.animate-slideTop {
+  animation: slideTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.menu_underline:after {
+  display: block;
+  content: "";
+  border-bottom: solid 1px rgb(255, 255, 255);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu_underline:hover:after {
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.innerzoom img{
+  transition: 0.3s ease-in-out;
+}
+
+.innerzoom:hover img {
+  scale: 1.3;
+  transition: 0.3s ease-in-out;
+}

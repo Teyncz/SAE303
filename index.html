@@ -9,35 +9,354 @@
     <style type="text/tailwindcss">
         @theme {
             --greenDark: #263030;
+            --Black: #1A1C1C;
+            --blueDark: #042E4D;
+            --ClearGray: #F3F3F3;
         }
       </style>
     <title>Document</title>
 </head>
 
-<body class="h-[200vh]">
+<body class="h-[500vh]">
 
-    <head>
+    <header
+        class="bg-[var(--Black)] z-999 relative max-w-[580px] h-[80px] flex justify-center items-center rounded-full m-auto mt-[20px]">
         <menu>
-            <ul>
-                <li><a href="#">L'enjeu</a></li>
-                <li><a href="#">Les solutions</a></li>
-                <li><a href="#">Les bénéfices</a></li>
+            <ul class="text-white text-[20px] flex gap-[40px]">
+                <li class="menu_underline"><a class="" href="#">L'enjeu</a></li>
+                <li><a class="menu_underline" href="#">Les solutions</a></li>
+                <li><a class="menu_underline" href="#">Les bénéfices</a></li>
             </ul>
         </menu>
-    </head>
+    </header>
 
-    <main>
-        <div class="max-w-[775px] flex flex-col gap-[20px]">
-            <h2 class="polysans text-[70px] tracking-[-5px] text-[var(--greenDark)] leading-none">Je vis chez moi, mais à quel prix
-                pour la planète ?</h2>
-            <p class="text-[24px] leading-[normal]">Chaque geste compte, du chauffage à l'éclairage, mes choix quotidiens influencent ma
-                consommation énergétique et mon empreinte carbone.</p>
+    <!-- Wrapper -->
+
+    <div class="max-w-[1720px] m-auto z-1">
+
+        <!-- Main -->
+
+        <main class="mt-[300px] w-full">
+            <div class="max-w-[775px] flex flex-col gap-[20px]">
+                <h2 class="polysans text-[70px] tracking-[-5px] text-[var(--greenDark)] leading-none">Je vis chez moi,
+                    mais à quel prix
+                    pour la planète ?</h2>
+                <p class="text-[24px] leading-[normal]">Chaque geste compte, du chauffage à l'éclairage, mes choix
+                    quotidiens influencent ma
+                    consommation énergétique et mon empreinte carbone.</p>
+            </div>
+            <div class="absolute top-0 right-0">
+                <img class="select-none cursor-default" src="./public/images/house_grid.svg">
+                <img class="absolute top-[250px] right-[50px] hover:translate-4 hover:duration-500 duration-500"
+                    src="./public/images/house_main.svg">
+            </div>
+            <div
+                class="mt-[280px] flex flex-col items-center px-[30px] w-full h-[200px] bg-[rgba(38,48,48,0.09)] rounded-[25px] justify-center gap-[25px] relative z-999">
+                <p class="polysans text-[16px] text-[rgba(0,0,0,0.43)]">Ils nous font confiance</p>
+                <div class="flex justify-between items-end w-full overflow-hidden">
+                    <img class="max-h-[70px] w-full" src="./public/images/iut_logo.svg">
+                    <img class="max-h-[70px] w-full" src="./public/images/grandest_logo.svg">
+                    <img class="max-h-[70px] w-full" src="./public/images/es_logo.svg">
+                    <img class="max-h-[70px] w-full mix-blend-multiply" src="./public/images/cstb_logo.svg">
+                    <img class="max-h-[70px] w-full mix-blend-multiply" src="./public/images/ministere_logo.svg">
+                    <img class="max-h-[70px] w-full mix-blend-multiply" src="./public/images/anah_logo.svg">
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Section "L'impact du réchauffement" -->
+
+        <section class="mt-[150px]">
+
+            <div
+                class="max-w-[888px] bg-[var(--Black)] rounded-[25px] pt-[30px] pb-[65px] pl-[70px] relative m-auto hover:scale-[.96] hover:duration-300 duration-300 innerzoom ">
+                <div class="max-w-[585px] flex flex-col gap-[40px] ">
+                    <div class="">
+                        <h4 class="polysans text-[48px] tracking-[-2.4px] leading-[normal] text-white">
+                            L'impact du réchauffement <span class="text-[#5A5F5F]">climatique</span>
+                        </h4>
+                    </div>
+                    <div class="text-white flex flex-col gap-[30px] text-[18px] font-[200]">
+                        <p>
+                            De nos jours, le réchauffement climatique est perceptible à l'œil nu avec, par exemple, la
+                            diminution de la taille des glaciers, ou encore une hausse des températures moyennes en
+                            France.
+                        </p>
+                        <p>
+                            Ces changements sont la conséquence des quantités importantes de gaz à effets de serre émis
+                            dans
+                            l'atmosphère.
+                        </p>
+                    </div>
+                    <img class="absolute max-h-[full] top-0 right-0" src="./public/images/vector_line.svg">
+                </div>
+            </div>
+
+
+            <div class="flex justify-between mt-[150px] gap-[100px]">
+
+                <!-- Graphique Glaciers -->
+
+                <div class="max-w-[700px]">
+                    <div class="">
+                        <p class="polysans text-[26px] tracking-[-1px]">Variation de l’épaisseur des glaciers alpins au
+                            fil des années</p>
+                        <span class="text-[16px]">Variation en m</span>
+                    </div>
+                    <img class="w-full" src="./public/images/Graph/Glaciers.svg">
+                </div>
+
+                <!-- Graphique Températures -->
+
+                <div class="max-w-[700px]">
+                    <div class="">
+                        <p class="polysans text-[26px] tracking-[-1px]">Évolution de la moyenne des températures en
+                            France</p>
+                        <span class="text-[16px]">Variation en °C</span>
+                    </div>
+                    <img class="w-full" src="./public/images/Graph/Températures.svg">
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section "Part des émissions" -->
+
+        <section class="max-w-[1445px] flex w-full mt-[150px] relative justify-items-start">
+
+            <div
+                class="max-w-[888px] bg-[var(--blueDark)] w-full rounded-[25px] pt-[30px] pb-[65px] pl-[70px] relative hover:scale-[.96] hover:duration-300 duration-300 innerzoom ">
+                <div class="max-w-[585px] flex flex-col gap-[40px] ">
+                    <div class="">
+                        <h4 class="polysans text-[48px] tracking-[-2.4px] leading-[normal] text-white">
+                            Part des émissions du
+                            <span class="text-[#5583A5]">secteur résidentiel </span>
+                        </h4>
+                    </div>
+                    <div class="text-white flex flex-col gap-[30px] text-[18px] font-[200]">
+                        <p>
+                            Les logements représentent 18% des émissions de GES en France derrière les transports et
+                            l'industrie manufacturière. La consommation d'énergie du secteur résidentiel provient
+                            principalement du chauffage.
+                        </p>
+                    </div>
+                    <img class="absolute max-h-[full] top-0 right-0" src="./public/images/vector_line.svg">
+                </div>
+            </div>
+
+            <div class="max-w-[760px] absolute top-[40%] right-0 hover:scale-[.96] hover:duration-300 duration-300">
+                <img class="w-full" src="./public/images/Graph/part_emissions.svg">
+            </div>
+
+        </section>
+    </div>
+    <section class="bg-[var(--ClearGray)] w-full h-[700px] mt-[450px] py-[80px]">
+        <div class="max-w-[1720px] m-auto">
+            <div class="w-full rounded-t-[25px] h-[250px] bg-white flex p-[50px] justify-between">
+                <h5
+                    class="polysans text-[48px] text-[var(--greenDark)] max-w-[800px] tracking-[-2,4px] leading-[normal]">
+                    Chauffage et passoires thermiques, un enjeu énergétique</h5>
+                <img class="pr-[125px]" src="./public/images/citepa_logo.svg">
+            </div>
+            <div class="flex justify-between">
+                <div
+                    class="bg-white w-full h-[250px] rounded-bl-[25px] border-t-3 border-r-3 border-[var(--ClearGray)] flex flex-col justify-center items-center hover:h-[230px] duration-400 ease-out hover:bg-[#e9f7ed]">
+                    <p class="polysans text-[64px] text-[var(--greenDark)]">58 400 000</p>
+                    <span class="polysans text-[16px]">Tonnes équivalent CO2 / an</span>
+                </div>
+                <div
+                    class="bg-white w-full h-[250px] border-t-3 border-[var(--ClearGray)] flex flex-col justify-center items-center hover:h-[230px] duration-400 ease-out hover:bg-[#e9f7ed]">
+                    <p class="polysans text-[64px] text-[var(--greenDark)]">66%</p>
+                    <span class="polysans text-[16px]">Provient du chauffage </span>
+                </div>
+                <div
+                    class="bg-white w-full h-[250px] rounded-br-[25px] border-t-3 border-l-3 border-[var(--ClearGray)] flex flex-col justify-center items-center hover:h-[230px] duration-400 ease-out hover:bg-[#e9f7ed]">
+                    <p class="polysans text-[64px] text-[var(--greenDark)]">15,7%</p>
+                    <span class="polysans text-[16px]">De passoires thermiques</span>
+                </div>
+            </div>
         </div>
-        <div class="absolute top-0 right-0">
-            <img class="select-none cursor-default" src="./public/images/house_grid.svg">
-            <img class="absolute top-[250px] right-[50px] hover:top-[225px] hover:duration-300 duration-300"" src="./public/images/house_main.svg">
-        </div>
-    </main>
+
+    </section>
+    <div class="max-w-[1720px] m-auto z-1">
+        <section class="flex gap-[175px] items-center mt-[150px]">
+            <img src="./public/images/Graph/part-dpe.svg">
+            <div class="flex flex-col gap-[40px]">
+                <h5 class="polysans text-[48px] tracking-[-2,4px] max-w-[800px] leading-[normal] tracking-[-2.4px]">Part
+                    des logements par classe énergétique ( DPE )
+                </h5>
+                <div class="flex flex-col gap-[20px]">
+                    <p>La principale source de dépense énergétique des logements est le chauffage, en effet il
+                        représente
+                        66% de la consommation totale d'électricité des ménages</p>
+                    <p>
+                        Parmi les 30 millions de résidences en France, 15,7 % d'entre elles sont classées catégories F
+                        et G
+                        autrement appelées passoires thermiques c'est-à-dire qu'elles consomment plus de 331 Kwh/m²/an.
+                        Ces
+                        logements, extrêmement mal isolés, consomment une quantité d'énergie très importante notamment
+                        pour
+                        se chauffer en période hivernale.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="mt-[150px]">
+            <div
+                class="max-w-[888px] bg-[var(--Black)] rounded-[25px] pt-[30px] pb-[65px] pl-[70px] relative m-auto hover:scale-[.96] hover:duration-300 duration-300 innerzoom ">
+                <div class="max-w-[585px] flex flex-col gap-[40px] ">
+                    <div class="">
+                        <h4 class="polysans text-[48px] tracking-[-2.4px] leading-[normal] text-white">
+                            Améliorer son logement pour <span class="text-[#5A5F5F]">un impact réduit</span>
+                        </h4>
+                    </div>
+                    <div class="text-white flex flex-col gap-[30px] text-[18px] font-[200]">
+                        <p>
+                            Pour réduire son impact environnemental, il est possible d'apporter une multitude de
+                            changements à son logement. De la rénovation de l'isolation et du système de chauffage, à
+                            l'optimisation de la consommation quotidienne
+                        </p>
+                    </div>
+                    <img class="absolute max-h-[full] top-0 right-0" src="./public/images/vector_line.svg">
+                </div>
+            </div>
+
+            <div class="mt-[100px] flex flex-col items-center gap-[100px]">
+                <h5
+                    class="polysans text-[var(--greenDark)] text-[48px] tracking-[-2,4px] text-center m-auto max-w-[800px] leading-[normal] tracking-[-2.4px]">
+                    Rénover l’isolation de son logement
+                </h5>
+                <div class="max-w-[920px] flex flex-col gap-[50px] items-center">
+                    <img class="hover:transform hover:-translate-6 hover:duration-500 duration-500"
+                        src="./public/images/Graph/house_isolation.svg">
+                    <p class="max-w-[675px] text-center text-[20px]">Les passoires thermiques perdent jusqu’à 30 % de
+                        chaleur par le toit, 25 % par les murs et 10 % par les fenêtres</p>
+                </div>
+            </div>
+
+            <section class="mt-[100px] flex flex-col items-center gap-[100px]">
+                <h5
+                    class="polysans text-[var(--greenDark)] text-[48px] tracking-[-2,4px] text-center m-auto max-w-[800px] leading-[normal] tracking-[-2.4px]">
+                    Changer son système de chauffage
+                </h5>
+
+                <div class="w-full flex">
+
+                    <div
+                        class="max-w-[888px] bg-[var(--Black)] translate-x-[75px] w-full rounded-[25px] pt-[30px] pb-[65px] pl-[70px] relative hover:scale-[.96] hover:duration-300 duration-300 innerzoom ">
+                        <div class="max-w-[585px] flex flex-col gap-[40px] ">
+                            <div class="">
+                                <h4 class="polysans text-[48px] tracking-[-2.4px] leading-[normal] text-white">
+                                    Les passoires thermiques, un
+                                    <span class="text-[#5A5F5F]">choix énergivore</span>
+                                </h4>
+                            </div>
+                            <div class="text-white flex flex-col gap-[30px] text-[18px] font-[200]">
+                                <p>
+                                    Les passoires thermiques ont tendance à utiliser des méthodes très énergivores et
+                                    peu performantes. Tout d'abord, 54% des passoires thermiques sont chauffés à
+                                    l'électricité.
+                                </p>
+                            </div>
+                            <img class="absolute max-h-[full] top-0 right-0" src="./public/images/vector_line.svg">
+                        </div>
+                    </div>
+
+                    <div
+                        class="max-w-[888px] bg-[var(--blueDark)] -translate-x-[75px] translate-y-[150px] w-full rounded-[25px] pt-[30px] pb-[65px] pl-[70px] relative hover:scale-[.96] hover:duration-300 duration-300 innerzoom ">
+                        <div class="max-w-[585px] flex flex-col gap-[40px] ">
+                            <div class="">
+                                <h4 class="polysans text-[48px] tracking-[-2.4px] leading-[normal] text-white">
+                                    Des alternatives plus
+                                    <span class="text-[#5583A5]">écologiques et économiques</span>
+                                </h4>
+                            </div>
+                            <div class="text-white flex flex-col gap-[30px] text-[18px] font-[200]">
+                                <p>
+                                    Il est donc plus pertinent de se chauffer à l'aide d'une pompe à chaleur (PAC) ou
+                                    d'un poêle à granulés, qui non seulement affichent une plus faible émission de gaz à
+                                    effet de serre, mais offrent également un avantage économique grâce à des coûts de
+                                    fonctionnement réduits.
+                                </p>
+                            </div>
+                            <img class="absolute max-h-[full] top-0 right-0" src="./public/images/vector_line.svg">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Tableau Systèmes -->
+                <div class="my-[150px] w-full">
+                    <div class="flex w-full justify-between">
+                        <div class="flex flex-col gap-[30px]">
+                            <div
+                                class="max-w-[175px] w-full relative after:content-[''] mb-[20px] after:absolute after:bg-[#C4C4C4] after:h-[2px] after:w-1/2 after:translate-y-[15px] after:bottom-0">
+                                <p class="text-[18px] polysans">Pompe à chaleur</p>
+                            </div>
+                            <p class="text-[36px] text-center">4</p>
+                            <p class="text-[36px] text-center">0,079</p>
+                        </div>
+                        <div class="flex flex-col gap-[30px]">
+                            <div
+                                class="max-w-[175px] w-full relative after:content-[''] mb-[20px] after:absolute after:bg-[#C4C4C4] after:h-[2px] after:w-1/2 after:translate-y-[15px] after:bottom-0">
+                                <p class="text-[18px] polysans">Poêle à granulés</p>
+                            </div>
+                            <p class="text-[36px] text-center">0,85</p>
+                            <p class="text-[36px] text-center">0,032</p>
+                        </div>
+                        <div class="flex flex-col gap-[30px]">
+                            <div
+                                class="max-w-[175px] w-full relative after:content-[''] mb-[20px] after:absolute after:bg-[#C4C4C4] after:h-[2px] after:w-1/2 after:translate-y-[15px] after:bottom-0">
+                                <p class="text-[18px] polysans">Poêle à bois</p>
+                            </div>
+                            <p class="text-[36px] text-center">0,75</p>
+                            <p class="text-[36px] text-center">0,046</p>
+                        </div>
+                        <div class="flex flex-col gap-[30px]">
+                            <div
+                                class="max-w-[175px] w-full relative after:content-[''] mb-[20px] after:absolute after:bg-[#C4C4C4] after:h-[2px] after:w-1/2 after:translate-y-[15px] after:bottom-0">
+                                <p class="text-[18px] polysans">Chauffage électrique</p>
+                            </div>
+                            <p class="text-[36px] text-center">1</p>
+                            <p class="text-[36px] text-center">0,079</p>
+                        </div>
+                        <div class="flex flex-col gap-[30px]">
+                            <div
+                                class="max-w-[175px] w-full relative after:content-[''] mb-[20px] after:absolute after:bg-[#C4C4C4] after:h-[2px] after:w-1/2 after:translate-y-[15px] after:bottom-0">
+                                <p class="text-[18px] polysans">Réseau de chaleur</p>
+                            </div>
+                            <p class="text-[36px] text-center">0,9</p>
+                            <p class="text-[36px] text-center">0,112</p>
+                        </div>
+                        <div class="flex flex-col gap-[30px]">
+                            <div
+                                class="max-w-[175px] w-full relative after:content-[''] mb-[20px] after:absolute after:bg-[#C4C4C4] after:h-[2px] after:w-1/2 after:translate-y-[15px] after:bottom-0">
+                                <p class="text-[18px] polysans">Chauffage au gaz</p>
+                            </div>
+                            <p class="text-[36px] text-center">0,85</p>
+                            <p class="text-[36px] text-center">0,221</p>
+                        </div>
+                        <div class="flex flex-col gap-[30px]">
+                            <div
+                                class="max-w-[175px] w-full relative after:content-[''] mb-[20px] after:absolute after:bg-[#C4C4C4] after:h-[2px] after:w-1/2 after:translate-y-[15px] after:bottom-0">
+                                <p class="text-[18px] polysans">Chauffage au fioul</p>
+                            </div>
+                            <p class="text-[36px] text-center">0,85</p>
+                            <p class="text-[36px] text-center">0,324</p>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </section>
+
+        </section>
+    </div>
 
 </body>
 
