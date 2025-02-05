@@ -1,0 +1,40 @@
+@font-face {
+  font-family: PolySans;
+  src: url("../fonts/PolySans.woff2");
+}
+
+@font-face {
+  font-family: SF-Pro-Display-Regular;
+  src: url("../fonts/SF-Pro-Display-Regular.woff2");
+}
+
+body {
+  font-family: SF-Pro-Display-Regular;
+}
+
+:root {
+  --greenDark: #263030;
+  --secondary-color: #000;
+}
+
+.polysans {
+  font-family: PolySans;
+}
+
+.slideTop {
+  -webkit-animation: slideTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slideTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slideTop {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100px);
+    }
+  }
+
+  .animate-slideTop {
+    animation: slideTop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }

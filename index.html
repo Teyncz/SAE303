@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./public/styles/main.css">
+    <style type="text/tailwindcss">
+        @theme {
+            --greenDark: #263030;
+        }
+      </style>
+    <title>Document</title>
+</head>
+
+<body class="h-[200vh]">
+
+    <head>
+        <menu>
+            <ul>
+                <li><a href="#">L'enjeu</a></li>
+                <li><a href="#">Les solutions</a></li>
+                <li><a href="#">Les bénéfices</a></li>
+            </ul>
+        </menu>
+    </head>
+
+    <main>
+        <div class="max-w-[775px] flex flex-col gap-[20px]">
+            <h2 class="polysans text-[70px] tracking-[-5px] text-[var(--greenDark)] leading-none">Je vis chez moi, mais à quel prix
+                pour la planète ?</h2>
+            <p class="text-[24px] leading-[normal]">Chaque geste compte, du chauffage à l'éclairage, mes choix quotidiens influencent ma
+                consommation énergétique et mon empreinte carbone.</p>
+        </div>
+        <div class="absolute top-0 right-0">
+            <img class="select-none cursor-default" src="./public/images/house_grid.svg">
+            <img class="absolute top-[250px] right-[50px] hover:top-[225px] hover:duration-300 duration-300"" src="./public/images/house_main.svg">
+        </div>
+    </main>
+
+</body>
+
+</html>
